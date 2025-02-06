@@ -12,9 +12,8 @@ decimal val2 = 1234.5678m;
 // Common types are N (Number), G (General), F (Fixed-point), 
 // E (Exponential), D (Decimal), P (Percent), X (Hexadecimal),
 // C (Currency in local format)
-
-Console.WriteLine($"{val1:D}, {val1:N}, {val1:F}");
-Console.WriteLine($"{val2}");
+Console.WriteLine($"{val1:D}, {val1:N}, {val1:F}, {val1:G}");
+Console.WriteLine($"{val2:E}, {val2:N}, {val2:F}, {val2:G}");
 
 // TODO: Add a number after the format to specify precision
 Console.WriteLine($"{val1:D6}, {val1:N2},  {val1:G3}");
