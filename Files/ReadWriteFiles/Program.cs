@@ -6,14 +6,20 @@ const string filename = "TestFile.txt";
 
 // TODO 1: WriteAllText overwrites a file with the given content
 if (!File.Exists(filename)) {
-
+    File.WriteAllText(filename, "This is application programming. ");
 }
 
 // TODO 3: AppendAllText adds text to an existing file
-
+File.AppendAllText(filename, "300 level second semester. ");
 
 // TODO 4: A FileStream can be opened and written to until closed
-
+using(StreamWriter sw = File.AppendText(filename)){
+    sw.WriteLine("Rukevwe");
+    sw.WriteLine("Obire");
+    sw.WriteLine("BU/22C/IT/7476");
+}
 
 // TODO 2: ReadAllText reads all the content from a file
-
+string content;
+content = File.ReadAllText(filename);
+Console.WriteLine(content);
